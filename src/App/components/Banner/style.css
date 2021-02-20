@@ -1,0 +1,29 @@
+.action li {
+    margin-right: 15px;
+}
+
+.action li.wishlist a{
+    border: 2px solid burlywood;
+    border-radius: 100%;
+    height: 32px;
+    width: 32px;
+    position: relative;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: burlywood;
+}
+
+.action li.wishlist a:hover {
+    background-color: burlywood;
+    color: #fff;
+}
+
+.action {
+    position: absolute;
+    list-style: none;
+    bottom: 1.5em;
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,40 @@
+.novel {
+    overflow: hidden;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.novel .novel_thumb {
+    height: 350px;
+    position: relative;
+}
+
+.novel .novel_thumb img {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.novel .novel_content {
+    width: 100%;
+    display: inline-block;
+}
+
+.novel .novel_content .h6 {
+    color: #3a3939;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 23px;
+    transition: all 0.4s ease 0s;
+}
+
+.novel[data-theme="dark"] .novel_content .h6 {
+    color: #f2f2f2;
+}
+
+.novel[data-device="mobile"] .novel_content .h6 {
+    font-size: 12px;
+}
+
+.novel[data-device="mobile"] .novel_thumb {
+    height: 210px;
+}

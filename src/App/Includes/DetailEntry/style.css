@@ -1,0 +1,65 @@
+.detail {
+    font-size: 14px;
+}
+
+.detail .thumb-novel, .detail .thumb-novel img {
+    border-radius: 8px;
+}
+
+.detail .chapter .chapter-list {
+    width: 100%;
+}
+
+.detail .info {
+    padding: 0;
+    margin: 1.25em 0;
+}
+
+.detail .desc {
+    font-size: 14px;
+}
+
+.detail[data-device="mobile"], .detail[data-device="tablet"] {
+    font-size: 12px;
+}
+
+/* comment */
+.comment{
+    border-radius: 3px;
+    padding: 1.2em;
+}
+
+.comment .header_comment{
+    overflow: hidden;
+    border-bottom: 1px solid #d8d6d6;
+    line-height: 25px;
+}
+
+.comment .header_comment .sort_by{
+    line-height: 22px;
+    cursor: pointer;
+    vertical-align: top;
+    font-size: 12px;
+    font-weight: bold;
+    vertical-align: middle;
+    padding: 4px;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+.comment .header_comment .sort_by:focus {
+    outline: none;
+}
+
+.comment .header_comment .count_comment{
+    font-weight: 600;
+}
+
+.comment .body_comment {
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.comment .body_comment .avatar {
+    width: 40px;
+}

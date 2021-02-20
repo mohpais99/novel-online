@@ -1,0 +1,138 @@
+.sidebar--overlay {
+    display: block;
+    position: fixed;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 23, 0.5);
+}
+
+.sidenav {
+    position: absolute;
+    width: 320px;
+    background: rgb(242, 242, 247) none repeat scroll 0% 0% padding-box content-box;
+    right: 0;
+    margin: auto;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+            -o-transform: translate3d(0%, 0, 0);
+                transform: translate3d(0%, 0, 0);
+}
+
+.sidebar--overlay.fade .sidenav {
+    right: -320px;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+        -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+            -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+                transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.sidebar--overlay.fade.in {
+    z-index: 9999;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.sidebar--overlay.fade.in .sidenav {
+    right: 0;
+}
+
+.sidenav .sideheader {
+    height: 190px;
+    color: #fff;
+    background: #007bff none repeat scroll 0% 0%;
+    padding: 48px 20px 15px;
+    position: relative;
+}
+
+.sidenav .close {
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    color: red !important;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.533;
+}
+
+.sidenav .sideheader .side-btn {
+    margin-top: 8px;
+    margin-bottom: 14px;
+    font-size: 0.857rem;
+    line-height: 1.143rem;
+    font-weight: 500;
+    border-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    height: 40px;
+}
+
+.sidenav .sideheader .side-btn.side-outline {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+    padding: 0px .75rem;
+    border-radius: 8px;
+    outline: currentcolor none 0px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255);
+    background: transparent none repeat scroll 0% 0%;
+    color: #fff;
+}
+
+.sidenav .sideheader .side-btn.side-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+
+.sidenav .sidemenu {
+    background: #fff;
+    display: flex;
+    cursor: pointer;
+}
+
+.sidenav .sidemenu .icon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    color: #a3a3a3;
+    font-size: 15px;
+    line-height: 38px;
+    text-align: center;
+    color: #333;
+}
+
+.sidenav .sidemenu .menu {
+    color: #a3a3a3;
+    padding: 0 0 0 .5em;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 38px;
+    text-align: center;
+    color: #333;
+}
+
+.sidenav .sidemenu .menu span {
+    text-transform: uppercase;
+}
+
+
+
+.sidebar--overlay[data-theme="dark"] .sidenav {
+    background: #595959 none repeat scroll 0% 0% padding-box content-box;
+}
+
+.sidebar--overlay[data-theme="dark"] .sidenav  .sideheader {
+    background: #333 none repeat scroll 0% 0%;
+}
