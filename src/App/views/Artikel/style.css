@@ -1,0 +1,23 @@
+.entry-inner[data-theme="dark"] {
+    color: #e4e2e2;
+}
+
+.entry-inner .entry-header {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.entry-inner .entry-header .novel-links{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: Baskerville !important;
+}
+
+.entry-inner .entry-header .entry-posted {
+    display: flex;
+    justify-content: center;
+}
+
+.entry-inner .entry-content {
+    font-size: 14px;
+}

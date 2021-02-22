@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: Baskerville;
+    src: url('Assets/Fonts/Baskerville/LibreBaskerville-Regular.ttf');
+}
+
+@font-face {
     font-family: RedHadDisplay;
     src: url('Assets/Fonts/RedHatDisplay/RedHatDisplay.ttf');
 }

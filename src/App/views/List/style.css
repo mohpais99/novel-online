@@ -1,0 +1,11 @@
+.filter .header {
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.filter .header .icon {
+    width: 1em;
+    margin: 0 .45em .5em 0;
+}

@@ -63,3 +63,23 @@
 .comment .body_comment .avatar {
     width: 40px;
 }
+
+/* Novel Lainnya */
+.other-novel {
+    display: flex;
+    margin: .85em 0;
+    font-size: 10px;
+}
+
+.other-novel[data-theme="dark"] .h6{
+    color: #fff;
+}
+
+.other-novel .poster-novel {
+    width: 100px;
+}
+
+.other-novel .detail-novel .header .h6{
+    font-size: 12px;
+}
+

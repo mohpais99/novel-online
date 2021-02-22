@@ -1,4 +1,4 @@
-import { Home, List, Detail } from "./views";
+import { Home, List, Detail, Artikel } from "./views";
 
 const listNovel = [
     {
@@ -17,6 +17,12 @@ const listNovel = [
         path: "/novel/:params",
         name: "Detail Novel",
         component: Detail,
+        role: null
+    },
+    {
+        path: "/novel/:params/:params",
+        name: "Artikel Novel",
+        component: Artikel,
         role: null
     }
 ]
