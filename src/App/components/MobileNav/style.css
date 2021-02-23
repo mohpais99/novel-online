@@ -1,0 +1,12 @@
+.menu-mobile {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+    background: #fff;
+}
+
+.menu-mobile[data-theme="dark"] {
+    background-color: #343a40;
+    color: #fff;
+}

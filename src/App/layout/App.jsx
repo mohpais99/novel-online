@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Navigation, Footer } from 'App/components';
+import { Navigation, Footer, Sidebar } from 'App/components';
 import { Route, Switch } from 'react-router-dom';
 import routes from '../Routes';
 import { Loading } from 'App/views';
-import { Sidebar } from 'App/components';
+import ModalCustom from 'App/molekuls/ModalCustom';
+import { connect } from 'react-redux';
 
 class App extends Component {
     constructor(props) {
@@ -75,6 +76,7 @@ class App extends Component {
                                 theme={this.state["theme"]} />
                             <Switch>{this.getRoutes(routes)}</Switch>
                             <Footer {...this.state} />
+                            <ModalCustom theme={this.state.theme} show={this.props.modal.status} />
                         </div>
                 }
             </>
@@ -82,4 +84,8 @@ class App extends Component {
     }
 }
 
-export default App
+const mapStateToProps = state => ({
+    modal: state.Modal
+});
+
+export default connect(mapStateToProps)(App);

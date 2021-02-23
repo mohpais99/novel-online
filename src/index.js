@@ -14,13 +14,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import './font.css';
 import Routes from 'Routes';
+import { Provider } from 'react-redux';
+import store from 'Redux/store';
 
 library.add(fab, fas)
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <Routes />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
