@@ -37,7 +37,7 @@ function Detail(props) {
                     </div>
                 :
                     <>
-                        <Breadcumbs theme={props.theme} link={detail.title} />
+                        <Breadcumbs theme={props.theme} location={props.location} link={detail.title} />
                         <DetailEntry data={detail} {...props} />
                     </>
             }

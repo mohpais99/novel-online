@@ -10,3 +10,7 @@
     background-color: #343a40;
     color: #fff;
 }
+
+.menu-mobile .font[data-disabled="true"] {
+    color: rgb(168, 166, 166);
+}

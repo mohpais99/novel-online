@@ -17,10 +17,10 @@ function MobileNav(props) {
                     <div onClick={handleModal} className="col-auto my-auto">
                         <FontAwesomeIcon icon={["fa", "list"]}/>
                     </div>
-                    <div className="col-auto my-auto">
+                    <div className="col-auto my-auto font" onClick={() => !props.max && props.handleFont('plus')} data-disabled={props.max}>
                         <FontAwesomeIcon icon={["fa", "plus"]}/>
                     </div>
-                    <div className="col-auto my-auto">
+                    <div className="col-auto my-auto font" onClick={() => !props.min && props.handleFont('min')} data-disabled={props.min}>
                         <FontAwesomeIcon icon={["fa", "minus"]}/>
                     </div>
                     <div className="col-auto my-auto">

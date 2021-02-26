@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Breadcumbs } from 'App/molekuls';
 import { Link } from 'react-router-dom';
@@ -6,12 +6,39 @@ import './style.css';
 import { MobileNav } from 'App/components';
 
 function Artikel(props) {
-    const novel = require('App/listnovel').default;
     const {params} = props.match.params
+    const [min, setMin] = useState(false)
+    const [max, setMax] = useState(false)
+    const [font, setFont] = useState(14)
+    const novel = require('App/listnovel').default;
+    useEffect(() => {
+        const unsubscribe = (font) => {
+            const minimum = 12
+            const maximum = 16
+            if (font === minimum) {
+                setMin(true)
+            } else {
+                setMin(false)
+            }
+            if (font === maximum) {
+                setMax(true)
+            } else {
+                setMax(false)
+            }
+        }
+        unsubscribe(font)
+    }, [font])
+
+    const handleFont = data => {
+        if (data === 'plus') {
+            setFont(font+2)
+        } else {
+            setFont(font-2)
+        }
+    };
     return (
         <>
             <div className="container-fluid section font-12">
-                <Breadcumbs theme={props.theme} link={params} />
                 <div className="row px-2 mt-2">
                     <div className="col-12 py-2 col-md-9 px-1">
                         <article className="entry-inner" data-theme={props.theme}>
@@ -32,7 +59,7 @@ function Artikel(props) {
                                 </div>
                             </div>
                             <hr className="mt-0" />
-                            <div className="entry-content px-2">
+                            <div className="entry-content px-2" style={{fontSize: `${font}px`}}>
                                 <p>“Ha ha, seperti yang diharapkan sari penerus Komandan Ksatria. Anda mengungguli imperial mage itu menggunakan kekuatan anda.”</p>
                                 <p>“Terima kasih. Dibandingkan dengan ayah dan guru saya, saya masih memiliki perjalanan yang jauh.”</p>
                                 <p>Aku tidak bisa mengingat berapa kali aku telah melakukan percakapan yang sama berulang-ulang, tapi ada banyak orang yang menunggu dan mengantre untuk mengucapkan selamat kepadaku.</p>
@@ -106,7 +133,7 @@ function Artikel(props) {
                     </div>
                 </div>
             </div>
-            <MobileNav theme={props.theme} />
+            <MobileNav min={min} max={max} handleFont={handleFont} theme={props.theme} />
         </>
     )
 }
